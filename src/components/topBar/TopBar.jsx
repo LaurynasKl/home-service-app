@@ -15,7 +15,7 @@ function TopBar() {
                 </ul>
             </div>
 
-            <button> Login/Sign Up </button>
+            <button> Login / Sign Up </button>
         </div>
 
     )
