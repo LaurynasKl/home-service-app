@@ -1,3 +1,22 @@
-.search{
-    background-color: red;
+.search {
+//   background-color: blue;
+  text-align: center;
+  margin-top: 110px;
+
+  p {
+    // background-color: orange;
+    font-size: 63px;
+    font-weight: bold;
+    width: 100%;
+    padding: 0 330px;
+    span {
+      color: #8056eb;
+    }
+  }
+
+  .text {
+    color: gray;
+    font-size: 20px;
+  }
+
 }

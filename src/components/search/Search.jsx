@@ -1,19 +1,18 @@
 import styles from './Search.module.scss';
 import { CiSearch } from "react-icons/ci";
 
-function Search(){
+function Search() {
 
-    return(
-        <div className={ styles.search }>
+    return (
+        <div className={styles.search}>
             <div>
-            <p>Find Home <span>Service/Repair</span> Near You</p>
-            <p>Explore Best Home Servoce & Repair near you</p>
+                <p>Find Home <span>Service/Repair</span> Near You</p>
+                <p className={styles.text}>Explore Best Home Service & Repair near you</p>
             </div>
+            
             <div>
-
-            <input type="text" />
-            <img src="" alt="search-logo" />
-            <CiSearch />
+                <input type="text" />
+                <button><CiSearch /></button>
             </div>
         </div>
     )
