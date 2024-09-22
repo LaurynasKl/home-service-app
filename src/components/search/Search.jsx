@@ -10,8 +10,8 @@ function Search() {
                 <p className={styles.text}>Explore Best Home Service & Repair near you</p>
             </div>
             
-            <div>
-                <input type="text" />
+            <div className={styles.searchBtn}>
+                <input type="text" placeholder='Search'/>
                 <button><CiSearch /></button>
             </div>
         </div>

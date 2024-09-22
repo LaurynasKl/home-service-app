@@ -15,8 +15,35 @@
   }
 
   .text {
-    color: gray;
-    font-size: 20px;
+    color: #a8a8a8;
+    font-weight: normal;
+    font-size: 27px;
+    padding: 20px;
+  }
+
+  .searchBtn{
+      margin-top: 20px;
+
+      input{
+        margin-right: 15px;
+        background-color: transparent;
+        padding: 25px;
+        border-radius: 50px;
+        border: 1px solid #a8a8a8 ;
+        width: 22%;
+    }
+
+    button{
+        background-color: #8056eb;
+        color: white;
+        font-size: 20px;
+        padding: 22px;
+        border-radius: 50%;
+        border: none;
+    }
+    :hover{
+        background-color: orange;
+    }
   }
 
 }
