@@ -29,8 +29,11 @@
         background-color: transparent;
         padding: 25px;
         border-radius: 50px;
-        border: 1px solid #a8a8a8 ;
+        border: 2px solid #dee1e2 ;
         width: 22%;
+        &:hover{
+          border: 2px solid #a8a8a8 ;
+        }
     }
 
     button{
@@ -40,9 +43,9 @@
         padding: 22px;
         border-radius: 50%;
         border: none;
-    }
-    :hover{
-        background-color: orange;
+        &:hover{
+            background-color: #5b24e7;
+        }
     }
   }
 
