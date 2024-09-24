@@ -1,11 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import TopBar from './TopBar';
 
 export function SiteLayout() {
     return (
-        <>
+        <div>
             <TopBar />
-            <Outlet />
-        </>
+            <main>
+                <Outlet />
+            </main>
+        </div>
     );
 };

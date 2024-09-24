@@ -1,16 +1,13 @@
 // import './App.css'
 
-import Category from "./components/category/Category"
-import Search from "./components/search/search"
-import TopBar from "./components/layout/TopBar"
+import { RouterProvider } from "react-router-dom"
+import { router } from "./router/router"
 
 function App() {
 
   return (
     <>
-      <TopBar />
-      <Search />
-      <Category />
+    <RouterProvider router={router} />
     </>
   )
 }

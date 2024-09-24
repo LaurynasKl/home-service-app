@@ -1,19 +1,20 @@
 import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
-// import { Link} from 'react-router-dom';
+import { routes } from '../../router/router';
+import { NavLink } from 'react-router-dom';
 
 function TopBar() {
     const links = [
         {
-            path: '#',
+            path: routes.home,
             label: "Home",
         },
         {
-            path: '#',
+            path: routes.services,
             label: "Services",
         },
         {
-            path: '#',
+            path: routes.about,
             label: "About Us",
         }
     ];
@@ -25,7 +26,7 @@ function TopBar() {
                 <h1>Logoipsum</h1>
                 <nav>
                     {links.map((link) => (
-                        <a key={link.label} to={link.path} className={style.link}>{link.label}</a>
+                        <NavLink key={link.label} to={link.path} className={style.link}>{link.label}</NavLink>
                     ))}
                 </nav>
             </div>
