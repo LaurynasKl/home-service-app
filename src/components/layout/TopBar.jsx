@@ -1,9 +1,12 @@
 import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
 import { routes } from '../../router/router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function TopBar() {
+
+    const navigate = useNavigate();
+
     const links = [
         {
             path: routes.home,
@@ -16,7 +19,7 @@ function TopBar() {
         {
             path: routes.about,
             label: "About Us",
-        }
+        },
     ];
 
     return (
@@ -32,7 +35,7 @@ function TopBar() {
             </div>
             
             <div className={style.rightSide}>
-                <button> Login / Sign Up </button>
+                <button onClick={() => navigate(routes.login)}> Login / Sign Up </button>
             </div>
         </div>
 

@@ -5,12 +5,14 @@ import { Services } from '../pages/Services/Services';
 import { Home } from "../pages/Home/Home";
 
 import { SiteLayout } from '../components/layout/SiteLayout';
+import { Login } from "../pages/Login-signIn/Login-SignIn.jsx";
 
 
 export const routes = {
         home: '/',
         about: '/about',
         services: '/services',
+        login: '/login',
     }
     
 export const router = createBrowserRouter([
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: routes.services,
                 element: <Services />
+            },
+            {
+                path: routes.login,
+                element: <Login />
             },
         ]
     }
