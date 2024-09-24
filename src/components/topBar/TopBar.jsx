@@ -1,5 +1,6 @@
 import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
+import { NavLink } from 'react-router-dom';
 
 function TopBar() {
 
@@ -8,11 +9,13 @@ function TopBar() {
             <div>
                 <img src={logo} alt="logo" />
                 <h1>Logoipsum</h1>
-                <ul>
-                    <button> Home </button>
-                    <button> Services </button>
-                    <button> About Us </button>
-                </ul>
+                <nav>
+                    <ul>
+                        <NavLink> Home </NavLink>
+                        <NavLink> Services </NavLink>
+                        <NavLink> About Us </NavLink>
+                    </ul>
+                </nav>
             </div>
 
             <button> Login / Sign Up </button>
