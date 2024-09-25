@@ -4,4 +4,5 @@ export const routes = {
     about: '/about',
     services: '/services',
     login: '/login',
+    searchCategory:'/search/:category',
 }

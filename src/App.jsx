@@ -19,7 +19,6 @@ const router = createBrowserRouter([
       {
         path: routes.home,
         element: <Home />,
-        
       },
       {
         path: routes.about,
@@ -32,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: routes.login,
         element: <Login />,
+      },
+      {
+        path: routes.searchCategory,
+        element: <searchCategory />,
       },
     ]
   }
