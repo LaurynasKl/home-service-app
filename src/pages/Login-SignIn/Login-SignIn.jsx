@@ -1,7 +1,19 @@
+import { useNavigate } from "react-router-dom"
+
 export function Login(){
+    const navigate = useNavigate();
+
+    function handleLogin(){
+        navigate("/")
+    }
+    function handleSignIn(){
+        navigate("#")
+    }
     return (
         <div>
             <h1>Login page</h1>
+            <button onClick={handleLogin}>login</button>
+            <p>If you dont have account signIn <button onClick={handleSignIn}>Sign In</button></p>
         </div>
     )
 }
