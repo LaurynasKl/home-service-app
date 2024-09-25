@@ -7,7 +7,7 @@ export function Login(){
         navigate("/")
     }
     function handleSignIn(){
-        navigate("#")
+        navigate("S")
     }
     return (
         <div>

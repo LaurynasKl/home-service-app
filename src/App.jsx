@@ -7,26 +7,31 @@ import { AboutUs } from './pages/AboutUs/AboutUs';
 import { Services } from './pages/Services/Services';
 import { SiteLayout } from './components/layout/SiteLayout';
 import { Login } from "./pages/Login-signIn/Login-SignIn";
+import ErrorPage from "./pages/errorPage";
 
 
 const router = createBrowserRouter([
   {
-    path: "/", element: <SiteLayout />, children: [
+    path: "/", 
+    element: <SiteLayout />, 
+    errorElement: <ErrorPage />, 
+    children: [
       {
         path: routes.home,
-        element: <Home />
+        element: <Home />,
+        
       },
       {
         path: routes.about,
-        element: <AboutUs />
+        element: <AboutUs />,
       },
       {
         path: routes.services,
-        element: <Services />
+        element: <Services />,
       },
       {
         path: routes.login,
-        element: <Login />
+        element: <Login />,
       },
     ]
   }
