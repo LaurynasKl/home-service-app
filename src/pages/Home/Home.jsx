@@ -1,4 +1,5 @@
 import Category from "../../components/category/Category";
+import { CategoryCard } from "../../components/category/CategoryCard";
 import Search from "../../components/search/search";
 
 export function Home(){
@@ -6,6 +7,7 @@ export function Home(){
         <>
             <Search />
             <Category />
+            <CategoryCard />
         </>
     )
 };
