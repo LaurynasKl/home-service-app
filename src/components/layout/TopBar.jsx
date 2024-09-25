@@ -1,6 +1,6 @@
 import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
-import { routes } from '../../router/router';
+import { routes } from '../../router/routes';
 import { Link, useNavigate } from 'react-router-dom';
 
 function TopBar() {
@@ -23,7 +23,7 @@ function TopBar() {
     ];
 
     return (
-        <div className={style.topBar}>
+        <header className={style.topBar}>
             <div className={style.leftSide}>
                 <img src={logo} alt="logo" />
                 <h1>Logoipsum</h1>
@@ -37,7 +37,7 @@ function TopBar() {
             <div className={style.rightSide}>
                 <button onClick={() => navigate(routes.login)}> Login / Sign Up </button>
             </div>
-        </div>
+        </header>
 
     )
 }

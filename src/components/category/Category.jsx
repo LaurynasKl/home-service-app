@@ -10,7 +10,7 @@ import { MdElectricBolt } from "react-icons/md";
 function Category() {
 
     const categories = [
-        { name: "Cleaning", icon: <GiVacuumCleaner />, color: 'purple'},
+        { name:"Cleaning", icon: <GiVacuumCleaner />, color: 'purple'},
         { name:"Repair", icon:<GiAutoRepair />, color: 'orange'},
         { name:"Painting", icon: < GiLargePaintBrush />, color: 'lightseagreen'},
         { name:"Shifting", icon: < CiDeliveryTruck />, color: 'crimson'},
