@@ -14,8 +14,36 @@ export function CategoryCard() {
             name: "Vardenis Pavardenis",
             place: "Klaipeda",
             img: cleaning1
-            
         },
+        {
+            category: "Cleaning",
+            company: "House Cleaning",
+            name: "Vardenis Pavardenis",
+            place: "Klaipeda",
+            img: cleaning1
+        },
+        {
+            category: "Cleaning",
+            company: "House Cleaning",
+            name: "Vardenis Pavardenis",
+            place: "Klaipeda",
+            img: cleaning1
+        },
+        {
+            category: "Cleaning",
+            company: "House Cleaning",
+            name: "Vardenis Pavardenis",
+            place: "Klaipeda",
+            img: cleaning1
+        },
+        {
+            category: "Cleaning",
+            company: "House Cleaning",
+            name: "Vardenis Pavardenis",
+            place: "Klaipeda",
+            img: cleaning1
+        },
+
     ]
 
     return (

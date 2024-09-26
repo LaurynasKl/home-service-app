@@ -1,0 +1,13 @@
+.selectedCategory {
+    display: flex;
+}
+.left {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.right {
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box;
+}
