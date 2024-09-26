@@ -8,6 +8,7 @@ import { Services } from './pages/Services/Services';
 import { SiteLayout } from './components/layout/SiteLayout';
 import { Login } from "./pages/Login-signIn/Login-SignIn";
 import ErrorPage from "./pages/errorPage";
+import { SelectedCategory } from "./components/category/SelectedCategory";
 
 
 const router = createBrowserRouter([
@@ -36,8 +37,13 @@ const router = createBrowserRouter([
         path: routes.searchCategory,
         element: <searchCategory />,
       },
+      {
+        path: routes.searchCategory,
+        element: <SelectedCategory />,
+      },
     ]
   }
+  
 ]);
 
 function App() {

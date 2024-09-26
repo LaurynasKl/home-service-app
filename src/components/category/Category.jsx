@@ -6,8 +6,12 @@ import { GiLargePaintBrush } from "react-icons/gi";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { MdOutlinePlumbing } from "react-icons/md";
 import { MdElectricBolt } from "react-icons/md";
+import { routes } from '../../router/routes';
+import { useNavigate } from 'react-router-dom';
 
 function Category() {
+
+    const navigate = useNavigate();
 
     const categories = [
         { name:"Cleaning", icon: <GiVacuumCleaner />, color: 'purple'},
@@ -16,14 +20,14 @@ function Category() {
         { name:"Shifting", icon: < CiDeliveryTruck />, color: 'crimson'},
         { name:"Plumbing", icon: < MdOutlinePlumbing />, color: 'orange'},
         { name:"Electric", icon: < MdElectricBolt />, color: 'blue'},
-    ]
+    ];
 
     return (
 
         <div className={style.categories}>
 
             {categories.map((category) => (
-                <button key={category.name} className={style.btn}>
+                <button key={category.name} className={style.btn} onClick={() => navigate(routes.searchCategory.replace(':category', category.name))}>
                     <div className={style.icon} style={{color: category.color}}> {category.icon} </div>
                     <div className={style.name}> {category.name}</div>
                 </button>
