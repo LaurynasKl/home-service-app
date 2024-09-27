@@ -1,8 +1,13 @@
+import { useParams } from "react-router-dom";
 import Category2 from "./Category2";
-import { CategoryCard } from "./CategoryCard";
+import { CategoriesCards } from "./CategoryCard";
 import style from "./SelectedCategory.module.scss";
+import categoryCardStyle from "./CategoryCard.module.scss";
 
 export function SelectedCategory() {
+    const { category } = useParams();
+
+    const filteredCards = CategoriesCards.filter(categoryItem => categoryItem.category === category);
 
     return (
         <div className={style.selectedCategory}>
@@ -10,9 +15,22 @@ export function SelectedCategory() {
                 <Category2 />
             </aside>
             <div className={style.right}>
-                <CategoryCard />
+                <div className={categoryCardStyle.categoryCard}>
+                    {filteredCards.map((categoryItem, index) => (
+                        <div key={index} className={categoryCardStyle.card}>
+                            <img src={categoryItem.img} alt={categoryItem.category} />
+                            <div className={style.info}>
+                                <h3 className={categoryCardStyle.category}>{categoryItem.category}</h3>
+                                <h3 className={categoryCardStyle.company}>{categoryItem.company}</h3>
+                                <h4 className={categoryCardStyle.name}>{categoryItem.name}</h4>
+                                <h4 className={categoryCardStyle.place}>{categoryItem.place}</h4>
+                                <button onClick={() => console.log("Book Now clicked")}>Book Now</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </div >
 
     )
 }
