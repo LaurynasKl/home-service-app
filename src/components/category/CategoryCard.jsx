@@ -50,7 +50,7 @@ export function CategoryCard() {
                         <h3 className={style.company}>{card.company}</h3>
                         <h4 className={style.name}>{card.name}</h4>
                         <h4 className={style.place}>{card.place}</h4>
-                    <button onClick={() => navigate(routes.searchCategory)}>Book Now</button>
+                    <button className={style.btn} onClick={() => navigate(routes.searchCategory)}>Book Now</button>
                     </div>
                 </div>
             ))}
