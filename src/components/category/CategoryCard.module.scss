@@ -17,13 +17,30 @@
     width: 100%;
   }
 }
-
 .category {
-  background-color: orange;
+  background-color: #e3dbfa;
+  color: #9977ef;
   display: inline-block;
-  border: 1px solid black;
   padding: 7px;
   margin: 10px 0;
   border-radius: 40px;
 }
+.company {
+  margin-bottom: 5px;
+}
+.name {
+  color: #9977ef;
+}
+.place {
+  margin: 5px 0;
+}
 
+.btn {
+  background-color: #8056eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}

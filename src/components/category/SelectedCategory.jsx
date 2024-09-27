@@ -24,7 +24,7 @@ export function SelectedCategory() {
                                 <h3 className={categoryCardStyle.company}>{categoryItem.company}</h3>
                                 <h4 className={categoryCardStyle.name}>{categoryItem.name}</h4>
                                 <h4 className={categoryCardStyle.place}>{categoryItem.place}</h4>
-                                <button onClick={() => console.log("Book Now clicked")}>Book Now</button>
+                                <button className={categoryCardStyle.btn} onClick={() => console.log("Book Now clicked")}>Book Now</button>
                             </div>
                         </div>
                     ))}
