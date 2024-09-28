@@ -3,6 +3,7 @@ import cleaning1 from '../../assets/cleaning1.png';
 import repair from '../../assets/repair.png';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '../../router/routes';
+import { FaHeart } from "react-icons/fa";
 
 export const CategoriesCards = [
     {
@@ -45,6 +46,7 @@ export function CategoryCard() {
             {CategoriesCards.map((card, index) => (
                 <div key={index} className={style.card}>
                     <img src={card.img} alt={card.category} />
+                    <button className={style.likeBtn}><FaHeart /></button>
                     <div className={style.info}>
                         <h3 className={style.category}>{card.category}</h3>
                         <h3 className={style.company}>{card.company}</h3>
