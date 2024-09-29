@@ -1,19 +1,29 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import style from "./Login-SignIn.module.scss";
 
-export function Login(){
+export function Login() {
     const navigate = useNavigate();
 
-    function handleLogin(){
+    function handleLogin() {
         navigate("/")
     }
-    function handleSignIn(){
+    function handleSignIn() {
         navigate("S")
     }
+
+
     return (
-        <div>
-            <h1>Login page</h1>
-            <button onClick={handleLogin}>login</button>
-            <p>If you dont have account signIn <button onClick={handleSignIn}>Sign In</button></p>
+        <div className={style.loginForm}>
+            <h1>Login</h1>
+            <div className={style.card}>
+                <input className={style.input} type="text" id="username" placeholder="Username" />
+                <input className={style.input} type="text" id="password" placeholder="Password" />
+            <button className={style.loginBtn} onClick={handleLogin}>login</button>
+            </div>
+
+
+
+            <p> Dont have an account?<button className={style.signInBtn} onClick={handleSignIn}>Sign In</button></p>
         </div>
     )
 }
