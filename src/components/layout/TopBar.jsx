@@ -2,6 +2,8 @@ import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
 import { routes } from '../../router/routes';
 import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/LoginContext';
+import { useContext } from 'react';
 
 function TopBar() {
 
@@ -21,6 +23,8 @@ function TopBar() {
             label: "About Us",
         },
     ];
+
+    const {user, login, logout } = useContext(UserContext);
 
     return (
         <header className={style.topBar}>

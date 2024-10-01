@@ -10,7 +10,20 @@ import ErrorPage from "./pages/errorPage";
 import { SelectedCategory } from "./components/category/SelectedCategory"
 import { UserProvider } from "./context/LoginContext";
 import { Login } from "./pages/Login-SignIn/Login-SignIn";
+import { createContext, useState } from "react";
 
+
+const UserContext = createContext(null);
+
+function userProvider({ children }){
+  const [user, setUser] = useState(null);
+
+  return (
+    <UserContext.Provider value={{ user, setUser}} >
+      { children }
+    </UserContext.Provider>
+  );
+};
 
 const router = createBrowserRouter([
   {
