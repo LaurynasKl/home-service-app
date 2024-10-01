@@ -1,7 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import style from "./Login-SignIn.module.scss";
+import { UserContext } from "../../context/LoginContext";
+import { useContext } from "react";
 
 export function Login() {
+
+    // const {user, login, logout} = useContext(UserContext);
+
+
     const navigate = useNavigate();
 
     function handleLogin() {

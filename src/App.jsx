@@ -6,9 +6,10 @@ import { Home } from "./pages/Home/Home";
 import { AboutUs } from './pages/AboutUs/AboutUs';
 import { Services } from './pages/Services/Services';
 import { SiteLayout } from './components/layout/SiteLayout';
-import { Login } from "./pages/Login-signIn/Login-SignIn";
 import ErrorPage from "./pages/errorPage";
 import { SelectedCategory } from "./components/category/SelectedCategory"
+import { UserProvider } from "./context/LoginContext";
+import { Login } from "./pages/Login-SignIn/Login-SignIn";
 
 
 const router = createBrowserRouter([
@@ -45,9 +46,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <>
+    <UserProvider>
       <RouterProvider router={router} />
-    </>
+    </UserProvider>
   )
 }
 
