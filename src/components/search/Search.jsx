@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import styles from './Search.module.scss';
 import { CiSearch } from "react-icons/ci";
 
 function Search() {
+    const [input, setInput] = useState('');
 
+    function searchInput(event){
+        setInput(event.target.value)
+    }
     return (
         <div className={styles.search}>
             <div>
@@ -11,8 +16,8 @@ function Search() {
             </div>
             
             <div className={styles.searchBtn}>
-                <input type="text" placeholder='Search'/>
-                <button><CiSearch /></button>
+                <input type="text" value={input} placeholder='Search'/>
+                <button onClick={searchInput}><CiSearch /></button>
             </div>
         </div>
     )
